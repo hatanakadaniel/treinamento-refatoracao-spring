@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  database:
+    image: postgres:latest
+    environment:
+      POSTGRES_PASSWORD: 123mudar
+      POSTGRES_USER: bookuser
+      POSTGRES_DB: bookdb
+    ports:
+      - 5432:5432

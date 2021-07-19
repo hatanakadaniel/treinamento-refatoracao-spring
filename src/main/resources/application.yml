@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: book-api
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bookdb
+    username: bookuser
+    password: 123mudar
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+server:
+  error:
+    include-binding-errors: always
