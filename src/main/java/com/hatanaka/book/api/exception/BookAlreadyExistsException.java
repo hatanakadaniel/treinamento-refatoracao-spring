@@ -1,4 +1,4 @@
-package com.hatanaka.book.api;
+package com.hatanaka.book.api.exception;
 
 import lombok.*;
 import org.springframework.http.HttpStatus;

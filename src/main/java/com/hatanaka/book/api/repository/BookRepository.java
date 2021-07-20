@@ -1,5 +1,6 @@
-package com.hatanaka.book.api;
+package com.hatanaka.book.api.repository;
 
+import com.hatanaka.book.api.entity.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

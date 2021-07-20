@@ -1,5 +1,6 @@
-package com.hatanaka.book.api;
+package com.hatanaka.book.api.resource.excpetion;
 
+import com.hatanaka.book.api.exception.BookAlreadyExistsException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -9,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @ControllerAdvice
-public class ExceptionHandlerResource {
+public class GlobalExceptionHandlerResource {
 
     @ExceptionHandler(ConstraintViolationException.class)
     public ResponseEntity<ErrorResponse> handleConstraintViolationException(final ConstraintViolationException ex) {

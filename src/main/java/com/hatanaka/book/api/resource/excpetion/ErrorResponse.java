@@ -1,4 +1,4 @@
-package com.hatanaka.book.api;
+package com.hatanaka.book.api.resource.excpetion;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
