@@ -65,8 +65,16 @@ Feature: Resource de livros
       | <bookName> |
     Then deve retornar status <status>
     Examples:
+      | bookName | status |
+      | livro1   | 409    |
+      | livro2   | 409    |
+
+  Scenario Outline: Criar um livro fora com o padrao de nome
+    When fizer um POST para o resource "/books/" com o body:
+      | name       |
+      | <bookName> |
+    Then deve retornar status <status>
+    Examples:
       | bookName    | status |
-      | livro1      | 409    |
-      | livro2      | 409    |
       | livr        | 400    |
       | livro123456 | 400    |
