@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import javax.validation.ConstraintViolationException;
+import java.util.List;
 import java.util.stream.Collectors;
 
 @ControllerAdvice
@@ -21,5 +22,16 @@ public class ExceptionHandlerResource {
                                .collect(Collectors.toList()))
                 .build();
         return ResponseEntity.badRequest().body(errorResponse);
+    }
+
+    @ExceptionHandler(BookAlreadyExistsException.class)
+    public ResponseEntity<ErrorResponse> handleConstraintViolationException(final BookAlreadyExistsException ex) {
+        final ErrorResponse errorResponse = ErrorResponse.builder()
+                .erros(List.of(Error.builder()
+                                       .field(ex.getField())
+                                       .message(ex.getMessage())
+                                       .build()))
+                .build();
+        return ResponseEntity.status(ex.getHttpStatus()).body(errorResponse);
     }
 }
