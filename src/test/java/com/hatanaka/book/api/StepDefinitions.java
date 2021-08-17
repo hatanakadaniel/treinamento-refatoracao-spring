@@ -31,7 +31,7 @@ import java.util.*;
 
 @RequiredArgsConstructor
 @Slf4j
-public class StepDefinitions extends ApiApplicationTests {
+public class StepDefinitions extends SpringIntegrationTest {
 
     private final TestWebClient testWebClient;
     private final Map<String, String> mapHeaders = new HashMap<>();
