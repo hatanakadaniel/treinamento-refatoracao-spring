@@ -4,7 +4,7 @@ import com.hatanaka.book.api.converter.BookConverter;
 import com.hatanaka.book.api.entity.Book;
 import com.hatanaka.book.api.exception.BookAlreadyExistsException;
 import com.hatanaka.book.api.repository.BookRepository;
-import com.hatanaka.book.api.resource.book.BookRequest;
+import com.hatanaka.book.api.resource.book.request.BookRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

@@ -2,6 +2,8 @@ package com.hatanaka.book.api.resource.book;
 
 import com.hatanaka.book.api.converter.BookResponseConverter;
 import com.hatanaka.book.api.entity.Book;
+import com.hatanaka.book.api.resource.book.request.BookRequest;
+import com.hatanaka.book.api.resource.book.response.BookResponse;
 import com.hatanaka.book.api.service.BookService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Size;

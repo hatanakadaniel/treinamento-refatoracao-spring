@@ -1,7 +1,7 @@
 package com.hatanaka.book.api.service;
 
 import com.hatanaka.book.api.entity.Book;
-import com.hatanaka.book.api.resource.book.BookRequest;
+import com.hatanaka.book.api.resource.book.request.BookRequest;
 
 import java.util.List;
 import java.util.Optional;
