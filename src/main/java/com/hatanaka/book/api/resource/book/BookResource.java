@@ -3,6 +3,8 @@ package com.hatanaka.book.api.resource.book;
 import com.hatanaka.book.api.converter.BookResponseConverter;
 import com.hatanaka.book.api.entity.Book;
 import com.hatanaka.book.api.service.BookService;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Size;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -10,8 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-import javax.validation.constraints.Size;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;

@@ -13,6 +13,6 @@ import java.util.List;
 @NoArgsConstructor
 public class ErrorResponse {
 
-    private List<Error> erros;
+    private List<Error> errors;
 
 }

@@ -1,5 +1,6 @@
-package com.hatanaka.book.api;
+package com.hatanaka.book.api.resource.excpetion;
 
+import com.hatanaka.book.api.exception.BookAlreadyExistsException;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -14,7 +15,7 @@ public class ExceptionHandlerResource {
     @ExceptionHandler(ConstraintViolationException.class)
     public ResponseEntity<ErrorResponse> handleConstraintViolationException(final ConstraintViolationException ex) {
         final ErrorResponse errorResponse = ErrorResponse.builder()
-                .erros(ex.getConstraintViolations().stream()
+                .errors(ex.getConstraintViolations().stream()
                                .map(constraintViolation -> Error.builder()
                                        .field(constraintViolation.getPropertyPath().toString())
                                        .message(constraintViolation.getMessage())
@@ -27,7 +28,7 @@ public class ExceptionHandlerResource {
     @ExceptionHandler(BookAlreadyExistsException.class)
     public ResponseEntity<ErrorResponse> handleConstraintViolationException(final BookAlreadyExistsException ex) {
         final ErrorResponse errorResponse = ErrorResponse.builder()
-                .erros(List.of(Error.builder()
+                .errors(List.of(Error.builder()
                                        .field(ex.getField())
                                        .message(ex.getMessage())
                                        .build()))
