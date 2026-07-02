@@ -1,4 +1,4 @@
-package com.hatanaka.book.api;
+package com.hatanaka.book.api.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

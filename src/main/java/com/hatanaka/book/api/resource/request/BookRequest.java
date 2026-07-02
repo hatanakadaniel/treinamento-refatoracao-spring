@@ -1,4 +1,4 @@
-package com.hatanaka.book.api;
+package com.hatanaka.book.api.resource.request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

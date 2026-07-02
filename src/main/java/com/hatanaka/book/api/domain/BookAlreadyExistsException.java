@@ -1,4 +1,4 @@
-package com.hatanaka.book.api;
+package com.hatanaka.book.api.domain;
 
 import lombok.*;
 import org.springframework.http.HttpStatus;

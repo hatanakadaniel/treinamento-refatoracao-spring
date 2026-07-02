@@ -1,17 +1,18 @@
-package com.hatanaka.book.api;
+package com.hatanaka.book.api.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
+import java.util.List;
 
 @Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class BookResponse implements Serializable {
+public class ErrorResponse {
 
-    private String name;
+    private List<Error> erros;
+
 }

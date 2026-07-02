@@ -1,5 +1,8 @@
-package com.hatanaka.book.api;
+package com.hatanaka.book.api.resource;
 
+import com.hatanaka.book.api.domain.BookAlreadyExistsException;
+import com.hatanaka.book.api.domain.Error;
+import com.hatanaka.book.api.domain.ErrorResponse;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
